@@ -64,7 +64,7 @@ promotionsRouter
 
   .put((req, res, next) => {
     Promotion.findByIdAndUpdate(
-      req.params.campsiteId,
+      req.params.promotionId,
       {
         $set: req.body,
       },
