@@ -14,7 +14,7 @@ partnersRouter
     });
   })
   .post((req, res, next) => {
-    Partner.create().then((partner) => {
+    Partner.create(req.body).then((partner) => {
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/json");
       res.json(partner);

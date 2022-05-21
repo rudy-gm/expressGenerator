@@ -17,7 +17,7 @@ promotionsRouter
   })
 
   .post((req, res, next) => {
-    Promotion.create()
+    Promotion.create(req.body)
       .then((promotion) => {
         console.log("Promotion Created", promotion);
         res.statusCode = 200;
